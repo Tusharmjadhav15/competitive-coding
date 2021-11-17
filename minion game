@@ -1,0 +1,24 @@
+def minion_game(s):
+    vowel = 'AEIOU'
+    s_score, k_score= 0,0
+    length = len(s)
+    for i in range(length):
+        score = length - i
+        if s[i] in vowel:
+            k_score+=score
+        else :
+            s_score+=score
+            
+    if k_score==s_score:
+        print('Draw')
+    elif k_score>s_score:
+        print("Kevin",k_score)
+    else:
+        print("Stuart",s_score)
+            
+        
+
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
